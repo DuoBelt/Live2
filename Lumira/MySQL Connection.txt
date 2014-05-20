@@ -1,0 +1,5 @@
+-- MySQL Connection
+UserName ; live2_xtra_user
+Password ; SHALive1
+Server:(port) ; 54.83.28.244:3306
+Database ; live2_xtra

@@ -1,0 +1,24 @@
+service namespace "Live2" {
+    "LIVE2"."Members" as "Members"
+        create forbidden 
+        update forbidden 
+        delete forbidden; 
+    "LIVE2"."Connections" as "Connections"
+        navigates ("ConnectionMembers" as "Members")
+        create forbidden 
+        update forbidden 
+        delete forbidden; 
+    "LIVE2"."Live2::lp.model_linkPrediction_Result"  as "Suggestions" key generate local "suggestionId"
+        navigates ("SuggestionMembers" as "Members")
+        create forbidden 
+        update forbidden 
+        delete forbidden;
+    association "ConnectionMembers"
+        principal "Connections"("memberIdTo") multiplicity "1" 
+        dependent "Members"("memberId") multiplicity "*"
+        ;
+    association "SuggestionMembers"
+        principal "Suggestions"("memberIdTo") multiplicity "1" 
+        dependent "Members"("memberId") multiplicity "*"
+        ;
+}

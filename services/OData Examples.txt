@@ -1,0 +1,8 @@
+http://hana/Live2/services.xsodata
+http://hana/Live2/services.xsodata/$metadata
+http://hana/Live2/services.xsodata/Members(1)?$format=json
+http://hana/Live2/services.xsodata/Members(1)?$format=json&$select=firstName,lastName
+http://hana/Live2/services.xsodata/Connections/?$format=json&$filter=memberIdFrom eq 1&$expand=Members
+http://hana/Live2/services.xsodata/Suggestions/?$format=json&$filter=memberIdFrom eq 1
+http://hana/Live2/services.xsodata/Suggestions/?$format=json&$filter=memberIdFrom eq 1&$top=5&$orderby=score desc
+http://hana/Live2/services.xsodata/Suggestions/?$format=json&$filter=memberIdFrom eq 1&$top=5&$orderby=score desc&$expand=Members

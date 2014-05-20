@@ -1,0 +1,30 @@
+-- Linux Commands
+
+-- start stop servers
+
+su - db1adm
+
+HDB info
+HDB stop
+HDB start
+HDB version
+
+-- viewing DSN
+
+su - db1adm
+
+vi ~/.odbc.ini
+
+-- Running iSQL
+
+su - db1adm
+
+isql --version
+
+isql -v REMOTEHDB sourceuser SHALive1
+
+select * from "SOURCE"."SOURCEMEMBERS"
+
+isql -v HIVE hive SHa12345
+
+select * from live_2.members

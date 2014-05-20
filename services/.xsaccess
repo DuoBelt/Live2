@@ -1,0 +1,6 @@
+{
+ "exposed": true,
+ "authentication": null,
+ "anonymous_connection": "Live2::anon",
+ "prevent_xsrf": true
+}
